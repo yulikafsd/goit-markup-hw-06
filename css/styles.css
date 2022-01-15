@@ -609,8 +609,10 @@ body {
 }
 
 .footer-left {
-  min-width: 231px;
-  margin-right: 70px;
+  /* min-width: 231px;
+  margin-roght: 70px;
+  - максимально соотв. макету*/
+  margin-right: 85px;
 }
 .footer-center {
   display: block;
@@ -832,7 +834,6 @@ body {
   color: var(--accent-color);
   transform: rotate(180deg);
   border-color: var(--accent-color);
-  outline: none;
 }
 .icon-close {
   fill: currentColor;
@@ -847,7 +848,8 @@ body {
 }
 
 .order-form-title {
-  margin-bottom: 30px;
+  display: block;
+  margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 20px;
@@ -856,21 +858,26 @@ body {
   color: var(--title-text-color);
 }
 
-.form-field {
+.form-label {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
 }
 
-.form-field:not(:last-child) {
-  margin-bottom: 28px;
-}
-
-.form-field.textarea {
+.form-label.textarea {
   margin-bottom: 20px;
 }
 
 .form-input {
   width: 100%;
-  margin: 0;
+  margin-top: 4px;
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 42px;
@@ -883,8 +890,8 @@ body {
 
 .form-textarea {
   width: 100%;
-  margin: 0;
   padding: 12px 16px;
+  margin-top: 4px;
 
   resize: none;
 
@@ -902,42 +909,33 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-field:focus-within > .form-input,
-.form-field:focus-within > .form-textarea {
+.form-label:focus-within > .form-input,
+.form-label:focus-within > .form-textarea {
   outline: transparent;
   border-color: var(--accent-color);
 }
 
-.form-label {
-  position: absolute;
-  top: -4px;
-  left: 0;
-  transform: translateY(-100%);
-
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: var(--primary-text-color);
-}
-
 .form-icon {
   position: absolute;
-  top: 50%;
+  bottom: 11px;
   left: 12px;
-  transform: translateY(-50%);
   fill: #212121;
   transition: fill var(--main-effect);
 }
 
-.form-field:focus-within > .form-icon {
+.form-label:focus-within > .form-icon {
   fill: var(--accent-color);
 }
 
-.form-field.agreement {
-  display: flex;
+.form-label.agreement {
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
 }
 
 .agreement-link {
@@ -956,7 +954,7 @@ body {
     fill var(--main-effect);
 }
 
-.form-field.agreement:focus-within > .form-icon-check {
+.form-label.agreement:focus-within > .form-icon-check {
   border-color: var(--accent-color);
 }
 
