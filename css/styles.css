@@ -772,7 +772,7 @@ body {
   left: 50%;
   opacity: 0;
   visibility: hidden;
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0.5);
 }
 
 .modal {
@@ -823,13 +823,16 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
-  transition: transform var(--main-effect), color var(--main-effect);
+  transition: transform var(--main-effect), color var(--main-effect),
+    border-color var(--main-effect);
 }
 
 .button-close:hover,
 .button-close:focus {
   color: var(--accent-color);
   transform: rotate(180deg);
+  border-color: var(--accent-color);
+  outline: none;
 }
 .icon-close {
   fill: currentColor;
@@ -855,8 +858,6 @@ body {
 
 .form-field {
   position: relative;
-  display: flex;
-  flex-direction: column;
 }
 
 .form-field:not(:last-child) {
@@ -877,6 +878,7 @@ body {
   border: 1px solid;
   border-color: rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color var(--main-effect);
 }
 
 .form-textarea {
@@ -888,6 +890,8 @@ body {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color var(--main-effect);
 }
 
 .form-input::placeholder,
@@ -896,6 +900,12 @@ body {
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field:focus-within > .form-input,
+.form-field:focus-within > .form-textarea {
+  outline: transparent;
+  border-color: var(--accent-color);
 }
 
 .form-label {
@@ -916,17 +926,18 @@ body {
   left: 12px;
   transform: translateY(-50%);
   fill: #212121;
+  transition: fill var(--main-effect);
+}
+
+.form-field:focus-within > .form-icon {
+  fill: var(--accent-color);
 }
 
 .form-field.agreement {
-  flex-direction: row;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-}
-
-.form-label-agreement {
-  margin: 0;
 }
 
 .agreement-link {
@@ -941,6 +952,18 @@ body {
   border-radius: 2px;
 
   fill: none;
+  transition: border-color var(--main-effect), background-color var(--main-effect),
+    fill var(--main-effect);
+}
+
+.form-field.agreement:focus-within > .form-icon-check {
+  border-color: var(--accent-color);
+}
+
+.form-input.agreement:checked ~ .form-icon-check {
+  border: transparent;
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
 }
 
 .button-submit {
@@ -962,8 +985,10 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: transparent;
   border-radius: 4px;
+  transition: background-color var(--main-effect);
 }
 
-.button-submit:hover {
-  background: #188ce8;
+.button-submit:hover,
+.button-submit:focus {
+  background-color: #188ce8;
 }
