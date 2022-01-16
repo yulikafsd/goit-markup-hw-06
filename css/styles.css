@@ -864,11 +864,14 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+}
+
+.label-text {
+  margin-bottom: 4px;
 
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: var(--primary-text-color);
 }
 
 .form-label.textarea {
@@ -877,7 +880,6 @@ body {
 
 .form-input {
   width: 100%;
-  margin-top: 4px;
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 42px;
@@ -891,12 +893,15 @@ body {
 .form-textarea {
   width: 100%;
   padding: 12px 16px;
-  margin-top: 4px;
 
   resize: none;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  font-size: 14px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 
   transition: border-color var(--main-effect);
 }
@@ -904,7 +909,7 @@ body {
 .form-input::placeholder,
 .form-textarea::placeholder {
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
