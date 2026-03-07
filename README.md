@@ -1,2 +1,2 @@
 # goit-markup-hw-06
-ДЗ 5 - WebStudio. Адаптивний дизайн.
+ДЗ 6 - WebStudio. Адаптивний дизайн.
