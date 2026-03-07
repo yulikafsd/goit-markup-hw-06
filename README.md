@@ -1,2 +1,2 @@
-# goit-markup-hw-05
-ДЗ 5 - WebStudio. Форми.
+# goit-markup-hw-06
+ДЗ 5 - WebStudio. Адаптивний дизайн.
