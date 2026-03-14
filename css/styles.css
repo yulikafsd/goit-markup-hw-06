@@ -514,9 +514,136 @@ body {
 
 /* #region Sections */
 
+.section {
+    padding: 96px 0;
+}
+
+.title {
+    margin-bottom: 72px;
+    font-weight: var(--font-weight-bold);
+    font-size: 36px;
+    line-height: var(--line-height-title);
+    letter-spacing: var(--letter-spacing-basic);
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--dark-color);
+}
+
+.subtitle {
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-title);
+    letter-spacing: var(--letter-spacing-basic);
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--dark-color);
+}
+
+.features-list,
+.team-list,
+.portfolio-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.features-list,
+.team-list {
+    gap: 72px;
+}
+
+.portfolio-list {
+    gap: 48px;
+}
+
+@media screen and (min-width: 768px) {
+    .section {
+        padding: 96px 0;
+    }
+
+    .subtitle {
+        text-align: left;
+    }
+
+    .features-list,
+    .team-list,
+    .portfolio-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+    }
+
+    .features-list,
+    .portfolio-list {
+        row-gap: 72px;
+    }
+
+    .team-list {
+        row-gap: 64px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .section {
+        padding: 120px 0;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        line-height: var(--line-height-subtitle);
+    }
+
+    .features-list,
+    .team-list,
+    .portfolio-list {
+        column-gap: 24px;
+        row-gap: 48px;
+    }
+}
+
 /* #endregion */
 
 /* #region Features */
+
+.features-icon-wrapper {
+    display: none;
+}
+
+.features .text {
+    font-weight: var(--font-weight-medium);
+}
+
+@media screen and (min-width: 768px) {
+
+    .features-list-item {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .features-list-item {
+        flex-basis: calc((100% - (24px*3)) / 4);
+    }
+
+    .features-icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 112px;
+        margin-bottom: 8px;
+        border: 1px solid var(--helper-text-color);
+        border-radius: var(--standard-border-radius);
+        background-color: var(--light-mode-color);
+    }
+
+    .features-icon {
+        fill: var(--dark-color);
+    }
+
+    .features .text {
+        font-weight: var(--font-weight-regular);
+    }
+}
 
 /* #endregion */
 
