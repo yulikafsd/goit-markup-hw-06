@@ -202,7 +202,7 @@
 
         <main>
             <!-- Hero Section -->
-            <section class="hidden hero">
+            <section class="hero">
                 <div class="container">
                     <h1 class="hero-title">
                         Effective Solutions for Your Business
@@ -214,7 +214,7 @@
             </section>
 
             <!-- Features Section -->
-            <section class="hidden section features">
+            <section class="section features">
                 <div class="container">
                     <!-- No header2 -->
                     <h2 class="visually-hidden" aria-label="features">
@@ -305,12 +305,16 @@
             </section>
 
             <!-- Our Team Section -->
-            <section class="hidden section team">
+            <section class="section team">
                 <div class="container">
                     <h2 class="title">Our team</h2>
                     <ul class="team-list">
                         <li class="team-list-item">
                             <img
+                                srcset="
+                                    ./images/image-1.jpg    1x,
+                                    ./images/image-1@2x.jpg 2x
+                                "
                                 src="./images/image-1.jpg"
                                 alt="Mark Guerrero Product Designer WebStudio"
                                 aria-hidden="true"
@@ -402,6 +406,10 @@
                         </li>
                         <li class="team-list-item">
                             <img
+                                srcset="
+                                    ./images/image-2.jpg    1x,
+                                    ./images/image-2@2x.jpg 2x
+                                "
                                 src="./images/image-2.jpg"
                                 alt="Tom Ford Frontend Developer WebStudio"
                                 aria-hidden="true"
@@ -493,6 +501,10 @@
                         </li>
                         <li class="team-list-item">
                             <img
+                                srcset="
+                                    ./images/image-3.jpg    1x,
+                                    ./images/image-3@2x.jpg 2x
+                                "
                                 src="./images/image-3.jpg"
                                 alt="Camila Garcia Marketing WebStudio"
                                 aria-hidden="true"
@@ -584,6 +596,10 @@
                         </li>
                         <li class="team-list-item">
                             <img
+                                srcset="
+                                    ./images/image-4.jpg    1x,
+                                    ./images/image-4@2x.jpg 2x
+                                "
                                 src="./images/image-4.jpg"
                                 alt="Daniel Wilson UI Designer WebStudio"
                                 aria-hidden="true"
@@ -678,13 +694,17 @@
             </section>
 
             <!-- Portfolio -->
-            <section class="hidden section portfolio">
+            <section class="section portfolio">
                 <div class="container">
                     <h2 class="title">Our portfolio</h2>
                     <ul class="portfolio-list">
                         <li class="portfolio-list-item">
                             <div class="portfolio-overlay">
                                 <img
+                                    srcset="
+                                        ./images/image-5.jpg    1x,
+                                        ./images/image-5@2x.jpg 2x
+                                    "
                                     src="./images/image-5.jpg"
                                     alt="Banking app interface design with dashboard and transaction screens"
                                     width="360"
@@ -706,6 +726,10 @@
                         <li class="portfolio-list-item">
                             <div class="portfolio-overlay">
                                 <img
+                                    srcset="
+                                        ./images/image-6.jpg    1x,
+                                        ./images/image-6@2x.jpg 2x
+                                    "
                                     src="./images/image-6.jpg"
                                     alt="Paying via QR code scan at a contactless payment terminal"
                                     width="360"
@@ -727,6 +751,10 @@
                         <li class="portfolio-list-item">
                             <div class="portfolio-overlay">
                                 <img
+                                    srcset="
+                                        ./images/image-7.jpg    1x,
+                                        ./images/image-7@2x.jpg 2x
+                                    "
                                     src="./images/image-7.jpg"
                                     alt="Responsive web design mockup on laptop and smartphone"
                                     width="360"
@@ -748,6 +776,10 @@
                         <li class="portfolio-list-item">
                             <div class="portfolio-overlay">
                                 <img
+                                    srcset="
+                                        ./images/image-8.jpg    1x,
+                                        ./images/image-8@2x.jpg 2x
+                                    "
                                     src="./images/image-8.jpg"
                                     alt="Smartphone with car navigation app mounted on a dashboard"
                                     width="360"
@@ -769,6 +801,10 @@
                         <li class="portfolio-list-item">
                             <div class="portfolio-overlay">
                                 <img
+                                    srcset="
+                                        ./images/image-9.jpg    1x,
+                                        ./images/image-9@2x.jpg 2x
+                                    "
                                     src="./images/image-9.jpg"
                                     alt="Mobile app UI kit with celestial animated wallpapers"
                                     width="360"
@@ -790,6 +826,10 @@
                         <li class="portfolio-list-item">
                             <div class="portfolio-overlay">
                                 <img
+                                    srcset="
+                                        ./images/image-10.jpg    1x,
+                                        ./images/image-10@2x.jpg 2x
+                                    "
                                     src="./images/image-10.jpg"
                                     alt="Smiling woman in casual wear listening to music on her smartphone"
                                     width="360"
@@ -814,7 +854,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="hidden footer">
+        <footer class="footer">
             <div class="container">
                 <div class="footer-info-wrapper">
                     <!-- Logo -->
@@ -934,7 +974,7 @@
             </div>
         </footer>
 
-        <div class="hidden modal-overlay" data-modal>
+        <div class="modal-overlay" data-modal>
             <div class="modal">
                 <button type="button" class="button-close" data-modal-close>
                     <svg class="icon-close" width="8" height="8">
@@ -1031,19 +1071,19 @@
                         ></textarea>
                     </div>
 
-                    <div class="label-input-svg-wrapper">
+                    <div class="contact-form-privacy-wrapper">
                         <input
                             type="checkbox"
                             name="user-privacy"
                             id="user-privacy"
                             value="true"
-                            class="contact-form-checkbox-policy visually-hidden"
+                            class="contact-form-checkbox-privacy visually-hidden"
                         />
                         <label
-                            class="contact-form-label-policy"
+                            class="contact-form-label-privacy"
                             for="user-privacy"
                         >
-                            <span class="svg-wrapper">
+                            <span class="privacy-svg-wrapper">
                                 <svg
                                     class="contact-form-icon-checkbox"
                                     width="10"
@@ -1054,14 +1094,16 @@
                                     ></use>
                                 </svg>
                             </span>
-                            I accept the terms and conditions of the
-                            <a
-                                href="#"
-                                target="_blank"
-                                class="contact-form-policy-link"
-                                rel="noreferrer noopener"
-                                >Privacy Policy</a
-                            >
+                            <span class="privacy-text-wrapper">
+                                I accept the terms and conditions of the
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="contact-form-privacy-link"
+                                    rel="noreferrer noopener"
+                                    >Privacy Policy</a
+                                >
+                            </span>
                         </label>
                     </div>
 
